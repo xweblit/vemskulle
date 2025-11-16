@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En person som</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/WHO/styles.css">
+    <link href="https://db.onlinewebfonts.com/c/5920863a7a13b2352910cda26fd36424?family=FONTE" rel="stylesheet" type="text/css"/>    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'hsl(220, 20%, 97%)',
+                        card: 'hsl(0, 0%, 100%)',
+                        'card-foreground': 'hsl(220, 15%, 15%)',
+                        primary: 'hsl(217, 91%, 50%)',
+                        'primary-foreground': 'hsl(0, 0%, 100%)',
+                        secondary: 'hsl(16, 100%, 61%)',
+                        'secondary-foreground': 'hsl(0, 0%, 100%)',
+                        muted: 'hsl(220, 15%, 90%)',
+                        'muted-foreground': 'hsl(220, 10%, 45%)',
+                        accent: 'hsl(45, 100%, 55%)',
+                        'accent-foreground': 'hsl(220, 15%, 15%)',
+                        success: 'hsl(142, 71%, 45%)',
+                        'success-foreground': 'hsl(0, 0%, 100%)',
+                        border: 'hsl(220, 15%, 88%)',
+                    },
+                    borderRadius: {
+                        'lg': '1rem',
+                    },
+                   
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Allison&family=Alumni+Sans+Pinstripe:ital@0;1&family=Anaheim&family=Anton&family=Architects+Daughter&family=Atma:wght@300;400;500;600;700&family=Audiowide&family=Bangers&family=Bebas+Neue&family=Belleza&family=Bruno+Ace&family=Bungee+Shade&family=Caveat:wght@400..700&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Cookie&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Courgette&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Covered+By+Your+Grace&family=Creepster&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Delius&family=Dosis:wght@200..800&family=Doto:wght@100..900&family=DynaPuff:wght@400..700&family=Electrolize&family=Emblema+One&family=Encode+Sans+SC:wght@100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Flavors&family=Fontdiner+Swanky&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Geo:ital@0;1&family=Homenaje&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Indie+Flower&family=Jost:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&family=Just+Me+Again+Down+Here&family=Kapakana:wght@300..400&family=La+Belle+Aurore&family=League+Script&family=Lexend:wght@100..900&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Mea+Culpa&family=Megrim&family=Metal+Mania&family=Michroma&family=Modak&family=Moirai+One&family=Monoton&family=Monsieur+La+Doulaise&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mr+Dafoe&family=Mrs+Saint+Delafield&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nixie+One&family=Nova+Square&family=Offside&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron&family=Parkinsans:wght@300..800&family=Pirata+One&family=Playwrite+TZ:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Qwigley&family=Rammetto+One&family=Rationale&family=Reenie+Beanie&family=Righteous&family=Road+Rage&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rochester&family=Saira:ital,wght@0,100..900;1,100..900&family=Sancreek&family=Schoolbell&family=Shrikhand&family=Space+Grotesk:wght@300..700&family=Stalinist+One&family=Syncopate:wght@400;700&family=Tektur:wght@400..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=VT323&family=Vast+Shadow&family=Viaoda+Libre&family=Wallpoet&display=swap');        
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .flip-card {
+            transition: transform 0.5s;
+        }
+        .flip-card.flipped {
+            transform: rotateY(180deg);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInBottom {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        .animate-slide-in-bottom {
+            animation: slideInBottom 0.3s ease-out;
+        }
+        .animate-zoom-in {
+            animation: zoomIn 0.5s ease-out;
+        }
+        .game-font{ font-family: "DynaPuff", system-ui;}
+    </style>
+</head>
+<body class="bg-slate-950 min-h-screen game-font">
+    <div class="min-h-screen p-4 flex items-center justify-center">
+        <div class="w-full max-w-md mx-auto">
+            
+            <!-- Setup Screen -->
+            <div id="setupScreen" class="animate-fade-in">
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold mb-2 text-blue-200">Vem är personen?</h1>
+                    <p class="text-muted-foreground font-mono">Lägg till spelare (max 15)</p>
+                </div>
+
+                <div class="bg-card rounded-lg p-6  mb-4">
+                    <div id="playerInputs" class="space-y-3">
+                        <!-- Player inputs will be added here -->
+                    </div>
+
+                    <button id="addPlayerBtn" class="w-full mt-4 px-4 py-2 border-2 border-dashed border-border rounded-lg hover:bg-muted transition-colors flex items-center justify-center gap-2 text-foreground">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        Lägg till spelare
+                    </button>
+                </div>
+
+                <button id="startGameBtn" class="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg  transition-colors">
+                    Starta spelet
+                </button>
+            </div>
+
+            <!-- Playing Screen -->
+            <div id="playingScreen" class="hidden animate-fade-in">
+                <div class="text-center mb-6">
+                    <div class="inline-flex items-center gap-2 bg-muted px-4 py-2 rounded-full mb-4">
+                        <svg class="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        <span id="playerCounter" class="text-sm font-medium text-muted-foreground">1 / 1</span>
+                    </div>
+                    <h2 id="currentPlayerName" class="text-3xl font-bold text-yellow-50 mb-2">Spelare</h2>
+                    <p class="text-muted-foreground">Din tur att svara</p>
+                </div>
+
+                <!-- Card Container -->
+                <div class="perspective-1000 mb-6">
+                    <div id="flipCard" class="relative w-full aspect-[3/4] transform-style-3d cursor-pointer flip-card">
+                        <!-- Card Back -->
+                        <div class="border-8 border-blue-100 absolute inset-0 backface-hidden flex items-center justify-center p-8 rounded-lg game-card_bg-clrs">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 mx-auto mb-4 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                                </svg>
+                                <p class="text-xl font-bold text-primary-foreground">Nämn en person som...</p>
+                                <p class="text-sm text-primary-foreground/80 mt-4">Tryck för att se frågan</p>
+                            </div>
+                        </div>
+
+                        <!-- Card Front -->
+                        <div class="absolute border-8 card-front_border-clr inset-0 backface-hidden rotate-y-180 flex items-center justify-center p-8 rounded-lg bg-card">
+                            <p id="questionText" class="text-2xl font-bold text-center text-card-foreground leading-relaxed"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button (appears after flip) -->
+                <button id="revealBtn" class="hidden w-full h-14 text-lg font-semibold bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg  transition-colors animate-slide-in-bottom">
+                    Vem sa du?
+                </button>
+            </div>
+
+            <!-- Reveal Screen -->
+            <div id="revealScreen" class="hidden">
+                <div class="text-center mb-6">
+                    <div class="inline-flex items-center gap-2 bg-muted px-4 py-2 rounded-full mb-4">
+                        <svg class="w-4 h-4 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        <span id="revealPlayerCounter" class="text-sm font-medium text-muted-foreground">1 / 1</span>
+                    </div>
+                    <h2 id="revealPlayerName" class="text-3xl font-bold text-yellow-50 mb-2">Spelare</h2>
+                    <p class="text-gray-100">Din tur att svara</p>
+                </div>
+
+                <!-- Outcome Card -->
+                <div id="outcomeCard" class="mb-6 animate-zoom-in p-8 text-center rounded-lg">
+                    <p id="outcomeEmoji" class="text-4xl font-bold mb-3"></p>
+                    <p id="outcomeText" class="text-xl opacity-90"></p>
+                </div>
+
+                <button id="nextPlayerBtn" class="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 text-gray-200 rounded-lg  transition-colors animate-slide-in-bottom">
+                    Nästa spelare
+                </button>
+            </div>
+
+            <!-- Finished Screen -->
+            <div id="finishedScreen" class="hidden animate-fade-in">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-accent rounded-3xl mb-4">
+                        <svg class="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-200 mb-2">Spelet är slut!</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <button id="playAgainBtn" class="w-full h-14 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg  transition-colors flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Spela igen
+                    </button>
+
+                    <button id="newPlayersBtn" class="w-full h-14 text-lg font-semibold bg-card hover:bg-muted text-foreground border border-border rounded-lg transition-colors flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        Nya spelare
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Funktion för att sätta slumpmässig färg på game-card_bg-clrs kort
+    (function() {
+      // Färgpaletten - 5 färger
+      const colors = [
+        '#EF4444', 
+        '#EAB308', 
+        '#3B82F6', 
+        '#F97316', 
+        '#A855F7'  
+      ];
+
+      // Funktion för att få en slumpmässig färg
+      function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      // Funktion för att sätta färg på ett kort
+      function setCardColor(card) {
+        const color = getRandomColor();
+        card.style.backgroundColor = color;
+        card.style.transition = 'background-color 0.5s ease';
+      }
+
+      // Initialisera alla kort med klassen game-card_bg-clrs
+      function initGameCards() {
+        const cards = document.querySelectorAll('.game-card_bg-clrs');
+        cards.forEach(card => setCardColor(card));
+      }
+
+      // Funktion för att randomisera ett specifikt kort (kan anropas från button)
+      window.randomizeCard = function(button) {
+        const card = button.closest('.game-card_bg-clrs');
+        if (card) {
+          setCardColor(card);
+        }
+      };
+
+      // Funktion för att randomisera alla kort
+      window.randomizeAllCards = function() {
+        const cards = document.querySelectorAll('.game-card_bg-clrs');
+        cards.forEach(card => setCardColor(card));
+      };
+
+      // Kör när sidan laddas
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGameCards);
+      } else {
+        initGameCards();
+      }
+    })();
+    </script>
+    <script src="/WHO/questions.js"></script>
+    <script src="/WHO/app.js"></script>
+</body>
+</html>
